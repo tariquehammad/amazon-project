@@ -30,12 +30,19 @@ export function addToCart(productId) {
     }
   });
 
+
+  let productAmount = document.querySelector(`.js-quantity-selector-${productId}`).value;
+
+  productAmount = Number(productAmount);
+
+  
+
   if (matchingItem) {
-    matchingItem.quantity++;
+    matchingItem.quantity = matchingItem.quantity + productAmount;
   } else {
     cart.push({
       productId: productId,
-      quantity: 1,
+      quantity: productAmount,
       deliveryOptionsId: '1'
     });
   }
