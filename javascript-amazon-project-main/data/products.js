@@ -667,5 +667,38 @@ export const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "bc1846e9-5323-403f-b7cf-57fde047a945",
+    image: "images/products/bluetooth-headphones.jpg",
+    name: "Sony WH-1000XM5 Wireless Headphones",
+    rating: {
+      stars: 3.5,
+      count: 13157
+    },
+    priceCents: 30000,
+    keywords: [
+      "headphone",
+      "wireless",
+      "electronics",
+      "audio"
+    ]
+  },
+  {
+    id: "bd1846e9-5122-403g-b6ch-57fde047a945",
+    image: "images/products/hp-victus-gaming-laptop.jpg",
+    name: "HP Victus Gaming Laptop",
+    rating: {
+      stars: 4.5,
+      count: 4157
+    },
+    priceCents: 30000,
+    keywords: [
+      "laptop",
+      "gaming",
+      "electronics",
+      "computer"
+    ]
+
   }
 ];
