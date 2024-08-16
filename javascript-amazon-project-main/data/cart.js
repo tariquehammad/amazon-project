@@ -49,7 +49,7 @@ export function addToCart(productId) {
   const timeoutId = setTimeout(() => {
     addedMessage.classList.remove('added-product');
 
-  },5000);
+  },2000);
 
   addedMessageTimeoutId = timeoutId;
 
