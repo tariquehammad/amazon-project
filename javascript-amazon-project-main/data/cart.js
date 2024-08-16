@@ -35,11 +35,23 @@ export function addToCart(productId) {
 
   productAmount = Number(productAmount);
 
-  document.querySelector(`.js-added-to-cart-${productId}`).classList.add('added-product')
+  let addedMessageTimeoutId;
 
-  setTimeout(() => {
-    document.querySelector(`.js-added-to-cart-${productId}`).classList.remove('added-product');
-  }, 2000);
+  const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+
+  addedMessage.classList.add('added-product')
+
+
+  if (addedMessageTimeoutId) {
+    clearTimeout(addedMessageTimeoutId);
+  }
+
+  const timeoutId = setTimeout(() => {
+    addedMessage.classList.remove('added-product');
+
+  },5000);
+
+  addedMessageTimeoutId = timeoutId;
 
   
 
