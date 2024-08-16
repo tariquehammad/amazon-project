@@ -35,6 +35,12 @@ export function addToCart(productId) {
 
   productAmount = Number(productAmount);
 
+  document.querySelector(`.js-added-to-cart-${productId}`).classList.add('added-product')
+
+  setTimeout(() => {
+    document.querySelector(`.js-added-to-cart-${productId}`).classList.remove('added-product');
+  }, 2000);
+
   
 
   if (matchingItem) {
