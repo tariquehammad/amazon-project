@@ -18,9 +18,12 @@ export function renderPaymentSummary(){
   });
 
 
+
   const totalBeforeTaxCents = productPriceCents + shippingPriceCents;
   const taxCents = totalBeforeTaxCents * 0.1;
   const totalCents = totalBeforeTaxCents + taxCents;
+
+
 
   let quantityPayment = 0; 
 
@@ -31,10 +34,10 @@ export function renderPaymentSummary(){
       cartQuantity += cartItem.quantity;
       quantityPayment = cartQuantity;
     });
-
     document.querySelector('.js-items-in-checkout').innerHTML = cartQuantity;
-    
   }
+
+
 
   updateCheckoutQuantity();
 
@@ -72,7 +75,6 @@ export function renderPaymentSummary(){
       Place your order
     </button>
   `;
-
   document.querySelector('.js-payment-summary')
   .innerHTML = paymentSummaryHTML;
 }
